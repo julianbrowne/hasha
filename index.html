@@ -6,12 +6,25 @@
 <body>
     <script>
         var pwds = [ "password", "letmein", "secret", "password", "mydogsname" ];
+
+        Hasha.print("Simple Hash");
+
         pwds.forEach( 
             function(pwd) { 
                 var h = Hasha.hash(pwd);
                 Hasha.print(pwd + " => " + h);
             }
         );
+
+        Hasha.print("Simple Hash and Salt");
+
+        pwds.forEach( 
+            function(pwd) { 
+                var h = Hasha.salty(pwd);
+                Hasha.print(pwd + " => " + h);
+            }
+        );
+
     </script>
 </body>
 </html>

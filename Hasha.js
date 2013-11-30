@@ -13,6 +13,12 @@ var Hasha = {
         return h;
     },
 
+    salty : function(input) { 
+        // random salt, random length
+        var s = Math.random().toString(36).substr(2, Math.floor((Math.random()*10)+1) );
+        return Hasha.hash(input + s);
+    },
+
     print : function(input) { 
         var p = document.createElement('P');
         var t = document.createTextNode(input);
