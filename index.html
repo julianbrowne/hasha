@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Hasha</title>
+    <script src="Hasha.js"></script>
+</head>
+<body>
+    <script>
+        var pwds = [ "password", "letmein", "secret", "password", "mydogsname" ];
+        pwds.forEach( 
+            function(pwd) { 
+                var h = Hasha.hash(pwd);
+                Hasha.print(pwd + " => " + h);
+            }
+        );
+    </script>
+</body>
+</html>
